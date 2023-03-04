@@ -8,9 +8,10 @@
         "allowJs": true,
         "moduleResolution": "node",
         "esModuleInterop": true,
-        "allowSyntheticDefaultImports": true
+        "allowSyntheticDefaultImports": true,
         // "plugins": [{ "name": "typescript-plugin-css-modules" }]
-        // "baseUrl": "."
+        "baseUrl": ".",
+        "paths": { "*": ["./src/*"] }
     },
     "ts-node": {
         "compilerOptions": {
