@@ -2,8 +2,8 @@ type Mods = Record<string, string | boolean>;
 
 export const cn = (
     cls: string,
-    mods: Mods,
-    additional: string[] | undefined,
+    mods: Mods = {},
+    additional: string[] | undefined = [],
 ): string => {
     return [
         cls,
