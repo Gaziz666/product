@@ -11,7 +11,7 @@ interface SidebarProps {
 
 export const Sidebar = ({ className }: SidebarProps) => {
     const [collapsed, setCollapsed] = useState(false);
-    const handleClick = () => setCollapsed((prev) => !prev);
+    const handleClick = (): void => setCollapsed((prev) => !prev);
     return (
         <div
             className={cn(cls.Sidebar, { [cls.collapsed]: collapsed }, [

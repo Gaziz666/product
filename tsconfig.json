@@ -11,7 +11,8 @@
         "allowSyntheticDefaultImports": true,
         // "plugins": [{ "name": "typescript-plugin-css-modules" }]
         "baseUrl": ".",
-        "paths": { "*": ["./src/*"] }
+        "paths": { "*": ["./src/*"] },
+        "strictNullChecks": true
     },
     "ts-node": {
         "compilerOptions": {
