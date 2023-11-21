@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { cn } from "shared/lib/classNames";
+import { cn } from "shared/lib/classNames/classNames";
 import { LangSwitcher } from "shared/ui/LangSwitcher";
 import { ThemeSwitcher } from "shared/ui/ThemeSwitcher";
 

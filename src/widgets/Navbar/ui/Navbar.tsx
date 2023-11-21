@@ -1,5 +1,5 @@
 import React from "react";
-import { cn } from "shared/lib/classNames";
+import { cn } from "shared/lib/classNames/classNames";
 import { AppLink, AppLinkThemes } from "shared/ui/AppLink/";
 
 import cls from "./Navbar.module.scss";

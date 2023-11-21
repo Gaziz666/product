@@ -2,12 +2,13 @@ module.exports = {
     env: {
         browser: true,
         es2021: true,
+        jest: true,
     },
     extends: [
         "plugin:react/recommended",
         "standard-with-typescript",
         "plugin:prettier/recommended",
-        "plugin:i18next/recommended"
+        "plugin:i18next/recommended",
     ],
     overrides: [],
     parserOptions: {
@@ -15,7 +16,7 @@ module.exports = {
         sourceType: "module",
         project: "tsconfig.json",
     },
-    plugins: ["react", "prettier", 'i18next'],
+    plugins: ["react", "prettier", "i18next"],
     rules: {
         "@typescript-eslint/explicit-function-return-type": "off",
         "@typescript-eslint/no-confusing-void-expression": "off",
@@ -24,6 +25,6 @@ module.exports = {
             0,
             { allowNullableBoolean: true },
         ],
-        "i18next/no-literal-string": ['warning', {markupOnly: true}]
+        "i18next/no-literal-string": ["warning", { markupOnly: true }],
     },
 };

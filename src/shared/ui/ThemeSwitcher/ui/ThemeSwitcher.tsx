@@ -1,6 +1,6 @@
 import { useTheme, Theme } from "app/providers/ThemProvider";
 import React from "react";
-import { cn } from "shared/lib/classNames";
+import { cn } from "shared/lib/classNames/classNames";
 import LightIcon from "../../../assets/icons/theme-light.svg";
 import DarkIcon from "../../../assets/icons/theme-dark.svg";
 import { Button, ThemeButton } from "shared/ui/Button";
