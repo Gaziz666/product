@@ -1,5 +1,7 @@
 {
     "test key": "тестовый ключ",
     "lang": "русский",
-    "mainPage": "Главная"
+    "mainPage": "Главная",
+    "aboutPage": "О себе",
+    "notFoundPage": "Страница не найдена"
 }

@@ -1,5 +1,7 @@
 {
     "test key": "test key",
     "lang": "english",
-    "mainPage": "Main Page"
+    "mainPage": "Main Page",
+    "aboutPage": "About Page",
+    "notFoundPage": "Page not found"
 }

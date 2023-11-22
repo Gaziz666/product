@@ -1,5 +1,6 @@
 {
   "aboutPage": "aboutPage",
   "lang": "lang",
-  "mainPage": "mainPage"
+  "mainPage": "mainPage",
+  "notFoundPage": "notFoundPage"
 }

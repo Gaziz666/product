@@ -4,4 +4,5 @@
     "css.validate": true,
     "scss.validate": true,
     "stylelint.validate": ["css", "scss"],
+    "i18n-ally.keystyle": "nested"
 }

@@ -25,6 +25,6 @@ module.exports = {
             0,
             { allowNullableBoolean: true },
         ],
-        "i18next/no-literal-string": ["warning", { markupOnly: true }],
+        "i18next/no-literal-string": ["warn", { markupOnly: true }],
     },
 };
