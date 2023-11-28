@@ -5,26 +5,74 @@ module.exports = {
         jest: true,
     },
     extends: [
-        "plugin:react/recommended",
-        "standard-with-typescript",
-        "plugin:prettier/recommended",
-        "plugin:i18next/recommended",
+        'plugin:react/recommended',
+        'airbnb',
+        'plugin:i18next/recommended',
     ],
-    overrides: [],
+    parser: '@typescript-eslint/parser',
     parserOptions: {
-        ecmaVersion: "latest",
-        sourceType: "module",
-        project: "tsconfig.json",
+        ecmaFeatures: {
+            jsx: true,
+        },
+        ecmaVersion: 'latest',
+        sourceType: 'module',
     },
-    plugins: ["react", "prettier", "i18next"],
+    plugins: ['react', '@typescript-eslint', 'i18next'],
     rules: {
-        "@typescript-eslint/explicit-function-return-type": "off",
-        "@typescript-eslint/no-confusing-void-expression": "off",
-        "@typescript-eslint/no-floating-promises": [2, { ignoreVoid: true }],
-        "@typescript-eslint/strict-boolean-expressions": [
-            0,
-            { allowNullableBoolean: true },
+        'react/jsx-indent': [2, 4],
+        'react/jsx-indent-props': [2, 4],
+        indent: [2, 4],
+        'react/jsx-filename-extension': [
+            2,
+            { extensions: ['.js', '.jsx', '.tsx'] },
         ],
-        "i18next/no-literal-string": ["warn", { markupOnly: true }],
+        'import/no-unresolved': 'off',
+        'import/prefer-default-export': 'off',
+        'no-unused-vars': 'warn',
+        'react/require-default-props': 'off',
+        'react/react-in-jsx-scope': 'off',
+        'react/jsx-props-no-spreading': 'warn',
+        'react/function-component-definition': 'off',
+        'no-shadow': 'off',
+        'import/extensions': 'off',
+        'import/no-extraneous-dependencies': 'off',
+        'no-underscore-dangle': 'off',
+        'i18next/no-literal-string': [
+            'error',
+            {
+                markupOnly: true,
+                ignoreAttribute: ['data-testid', 'to'],
+            },
+        ],
+        'max-len': ['error', { ignoreComments: true, code: 100 }],
+        'object-curly-newline': [
+            'error',
+            {
+                ObjectExpression: { multiline: true, minProperties: 3 },
+                ObjectPattern: { multiline: true },
+                ImportDeclaration: 'never',
+                ExportDeclaration: { multiline: true, minProperties: 3 },
+            },
+        ],
+        'react/jsx-props-no-spreading': [
+            enabled,
+            {
+                html: 'ignore' | 'enforce',
+                custom: 'ignore' | 'enforce',
+                explicitSpread: 'ignore' | 'enforce',
+                exceptions: [string],
+            },
+        ],
     },
+    globals: {
+        __IS_DEV__: true,
+    },
+    overrides: [
+        {
+            files: ['**/src/**/*.test.{ts,tsx}'],
+            rules: {
+                'i18next/no-literal-string': 'off',
+            },
+        },
+    ],
 };

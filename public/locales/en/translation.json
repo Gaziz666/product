@@ -3,5 +3,7 @@
     "lang": "english",
     "mainPage": "Main Page",
     "aboutPage": "About Page",
-    "notFoundPage": "Page not found"
+    "notFoundPage": "Page not found",
+    "errorText": "somsing happend",
+    "reloadPage": "relaod Page"
 }

@@ -4,6 +4,7 @@
  */
 
 import type { Config } from "@jest/types";
+import path from "path";
 
 const config: Config.InitialOptions = {
     // All imported modules in your tests should be mocked automatically
@@ -42,9 +43,15 @@ const config: Config.InitialOptions = {
         "json",
         "node",
     ],
+    modulePaths: ["<rootDir>src"],
     testMatch: ["<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)"],
     // The root directory that Jest should scan for tests and modules within
     rootDir: "../../",
+    setupFilesAfterEnv: ["<rootDir>config/jest/setupTests.ts"],
+    moduleNameMapper: {
+        "\\.s?css$": "identity-obj-proxy",
+        "\\.svg": path.resolve(__dirname, "jestEmptyComponent.tsx"),
+    },
     // Indicates which provider should be used to instrument code for coverage
     // coverageProvider: "babel",
 

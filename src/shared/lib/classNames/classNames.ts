@@ -11,5 +11,5 @@ export const cn = (
         ...Object.entries(mods)
             .filter(([className, value]) => !!value)
             .map(([className]) => className),
-    ].join(" ");
+    ].join(' ');
 };

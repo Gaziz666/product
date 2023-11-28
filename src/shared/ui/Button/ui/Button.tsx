@@ -1,9 +1,9 @@
-import React, { type HtmlHTMLAttributes, type FC } from "react";
-import { cn } from "shared/lib/classNames/classNames";
-import styles from "./Button.module.scss";
+import React, { type HtmlHTMLAttributes, type FC } from 'react';
+import { cn } from 'shared/lib/classNames/classNames';
+import styles from './Button.module.scss';
 
 export enum ThemeButton {
-    CLEAR = "clear",
+    CLEAR = 'clear',
 }
 
 interface ButtonProps extends HtmlHTMLAttributes<HTMLButtonElement> {
@@ -13,7 +13,7 @@ interface ButtonProps extends HtmlHTMLAttributes<HTMLButtonElement> {
 
 export const Button: FC<ButtonProps> = (props) => {
     const { className, children, theme, ...otherProps } = props;
-    console.log("theme", theme);
+    console.log('theme', theme);
     const classNames = [];
     if (className) {
         classNames.push(className);
@@ -22,7 +22,11 @@ export const Button: FC<ButtonProps> = (props) => {
         classNames.push(styles[theme]);
     }
     return (
-        <button className={cn(styles.Button, {}, classNames)} {...otherProps}>
+        <button
+            type="button"
+            className={cn(styles.Button, {}, classNames)}
+            {...otherProps}
+        >
             {children}
         </button>
     );

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1700537874958" clover="3.2.0">
-  <project timestamp="1700537874958" name="All files">
+<coverage generated="1700930441116" clover="3.2.0">
+  <project timestamp="1700930441116" name="All files">
     <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3" elements="9" coveredelements="9" complexity="0" loc="4" ncloc="4" packages="1" files="1" classes="1"/>
     <file name="classNames.ts" path="/Users/asia/Documents/Learning/React_advanced_UlbuTV/product_project/src/shared/lib/classNames/classNames.ts">
       <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
