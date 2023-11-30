@@ -3,10 +3,9 @@
  * https://jestjs.io/docs/configuration
  */
 
-import type { Config } from "@jest/types";
-import path from "path";
+import path from 'path';
 
-const config: Config.InitialOptions = {
+export default {
     // All imported modules in your tests should be mocked automatically
     // automock: false,
 
@@ -26,32 +25,46 @@ const config: Config.InitialOptions = {
     // collectCoverageFrom: undefined,
 
     // The directory where Jest should output its coverage files
-    coverageDirectory: "coverage",
-    testEnvironment: "jsdom",
+    coverageDirectory: 'coverage',
+    testEnvironment: 'jsdom',
 
     // An array of regexp pattern strings used to skip coverage collection
-    coveragePathIgnorePatterns: ["/node_modules/"],
-    moduleDirectories: ["node_modules"],
+    coveragePathIgnorePatterns: ['/node_modules/'],
+    moduleDirectories: ['node_modules'],
     // An array of file extensions your modules use
     moduleFileExtensions: [
-        "js",
-        "mjs",
-        "cjs",
-        "jsx",
-        "ts",
-        "tsx",
-        "json",
-        "node",
+        'js',
+        'mjs',
+        'cjs',
+        'jsx',
+        'ts',
+        'tsx',
+        'json',
+        'node',
     ],
-    modulePaths: ["<rootDir>src"],
-    testMatch: ["<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)"],
+    modulePaths: ['<rootDir>src'],
+    testMatch: ['<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)'],
     // The root directory that Jest should scan for tests and modules within
-    rootDir: "../../",
-    setupFilesAfterEnv: ["<rootDir>config/jest/setupTests.ts"],
+    rootDir: '../../',
+    setupFilesAfterEnv: ['<rootDir>config/jest/setupTests.ts'],
     moduleNameMapper: {
-        "\\.s?css$": "identity-obj-proxy",
-        "\\.svg": path.resolve(__dirname, "jestEmptyComponent.tsx"),
+        '\\.s?css$': 'identity-obj-proxy',
+        '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
     },
+    // transform: {
+    //     '^.+\\.(js|ts)$': 'ts-jest',
+    //     '^.+\\.(js|jsx)$': 'babel-jest',
+    // },
+    // transformIgnorePatterns: [
+    //     '/node_modules/(?![@autofiy/autofiyable|@autofiy/property]).+\\.js$',
+    //     '/node_modules/(?![@autofiy/autofiyable|@autofiy/property]).+\\.ts$',
+    //     '/node_modules/(?![@autofiy/autofiyable|@autofiy/property]).+\\.tsx$',
+    // ],
+    // globals: {
+    //     'ts-jest': {
+    //         isolatedModules: true,
+    //     },
+    // },
     // Indicates which provider should be used to instrument code for coverage
     // coverageProvider: "babel",
 
@@ -187,5 +200,3 @@ const config: Config.InitialOptions = {
     // Whether to use watchman for file crawling
     // watchman: true,
 };
-
-export default config;
